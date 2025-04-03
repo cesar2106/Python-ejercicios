@@ -158,9 +158,36 @@ num2=float(input ("ingrese otro numero \n "))
 
 operacion =input("introduce la operacion(+,-,*./) : ")
 
+if operacion == "+":
+  resultado = num1 + num2
+elif operacion == "-":
+  resultado = num1 - num2
+elif operacion == "*":
+  resultado = num1 * num2
+if num2 == 0:
+  print("eror:  nose puede dividir por cero.")
+  
+else:
+  resultado = num1 / num2
+  
+  print ("operacion no valida")
+  
+  if 'resultado' in locals(): #Comprueba si la variable resultado existe.
+    print(f"El resultado es: {resultado}")
+  
+  
+
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+
+anio = int(input("Intruduce un año:"))
+
+if(anio % 4 == 0 and anio % 100 != 0) or anio % 400 == 0:
+  
+  print(f"{anio}  es un año bisiesto.")
+else:
+  print(f"{anio} no es un año bisiesto.")
 
 
 
